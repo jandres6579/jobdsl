@@ -1,21 +1,23 @@
-proyect_name = "jenkins-pipeline-python" 
+project_name = "jenkins-pipeline-python" 
 repo = "https://github.com/jandres6579/prueba-test-1.git"
 repo_name = "repo" 
 
-pipelineJob(proyect_name) {
+
+pipelineJob(project_name) {
     definition {
-        triggers {
+        triggers{
             scm('H/1 * * * *')
         }
 
         cpsScm{
-            scm{
+            scm {
                 git {
                     remote {
                         name(repo_name)
                         url(repo)
                     }
                     scriptPath("Jenkinsfile")
+
                 }
             }
         }
