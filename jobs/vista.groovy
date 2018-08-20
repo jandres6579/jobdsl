@@ -3,6 +3,7 @@ listView('python') {
     jobs {
         regex(/.*python.*/)
     }
+    recurse()
     columns {
         status()
         weather()
