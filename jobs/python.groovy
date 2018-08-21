@@ -18,6 +18,7 @@ pipelineJob(project_name) {
     definition {
         triggers{
             scm('H/1 * * * *')
+            cron('H/35 * * * *')
         }
 
         cpsScm{
