@@ -1,7 +1,6 @@
 multibranchPipelineJob('dls-seed-MultiBranchPipeline_Scan1mins_BuildIfChanges') {
     triggers {
         periodic(1)
-        cron('@dialy')
     }
 
     branchSources {
