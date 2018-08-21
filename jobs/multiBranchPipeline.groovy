@@ -15,9 +15,3 @@ multibranchPipelineJob('dls-seed-MultiBranchPipeline_Scan1mins_BuildIfChanges') 
         }
     }
 }
-
-job('dls-seed-MultiBranchPipeline_Scan1mins_BuildIfChanges') {
-    triggers {
-        cron('@daily')
-    }
-}
