@@ -1,4 +1,4 @@
-multibranchPipelineJob('python-deploy') {
+multibranchPipelineJob('dls-seed-MultiBranchPipeline_Scan1mins_BuildIfChanges') {
     triggers {
         periodic(1)
     }

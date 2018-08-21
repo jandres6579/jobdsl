@@ -1,4 +1,4 @@
-project_name = "jenkins-pipeline-python" 
+project_name = "dls-seed-Pipeline-Scan1mins_Build1Hour" 
 /*
 Si quisiesemos incluir el job en una carpeta. Cambiaríamos la línea anteior por esta...
 project_name = "Proyecto-a/jenkins-pipeline-python-test" 
