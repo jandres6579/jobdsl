@@ -1,16 +1,26 @@
 //Documentación: https://jenkinsci.github.io/job-dsl-plugin/#
 
-project_name = "dls-seed-freeStyle-PruebaMega" 
+project_name = "dls-seed-freeStyle-GitLab_MegaPrueba_Scan3mins_Build15minsJenkinsfile" 
 repo = "http://odinsgitlab.ddns.net/IoTAS/conector-mega.git"
 repo_name = "repo1" 
 
 freeStyleJob(project_name) {
 
+    
+    
     //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
     //Indica la periodicidad para lanzar el build (cron)
     triggers{
         scm('H/3 * * * *')
         cron('H/15 * * * *')
+    }
+
+    //logRotator(int daysToKeep = -1, int numToKeep = -1, int artifactDaysToKeep = -1, int artifactNumToKeep = -1)
+    logRotator {
+        //If specified, build records are only kept up to this number of days.
+        //daysToKeep(5)
+        //If specified, only up to this number of build records are kept.
+        numToKeep(25)
     }
 
     //Vincula con el repositorio de GitLab con las Credenciales configuradas en Jenkins

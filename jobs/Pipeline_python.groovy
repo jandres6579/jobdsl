@@ -1,6 +1,6 @@
 //Documentación: https://jenkinsci.github.io/job-dsl-plugin/#
 
-project_name = "dls-seed-Pipeline-Scan1mins_Build1Hour" 
+project_name = "dls-seed-Pipeline-GitHub_Scan4mins_Build30MinsJenkinsfile" 
 /*
 Si quisiesemos incluir el job en una carpeta. Cambiaríamos la línea anteior por esta...
 project_name = "Proyecto-a/jenkins-pipeline-python-test" 
@@ -19,6 +19,8 @@ folder('Proyecto-a') {
 pipelineJob(project_name) {
     definition {
         triggers{
+            //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
+            //Indica la periodicidad para lanzar el build (cron)
             scm('H/4 * * * *')
             cron('H/30 * * * *')
         }
@@ -37,5 +39,13 @@ pipelineJob(project_name) {
                 }
             }
         }
+    }
+
+    //logRotator(int daysToKeep = -1, int numToKeep = -1, int artifactDaysToKeep = -1, int artifactNumToKeep = -1)
+    logRotator {
+        //If specified, build records are only kept up to this number of days.
+        //daysToKeep(5)
+        //If specified, only up to this number of build records are kept.
+        numToKeep(25)
     }
 }
