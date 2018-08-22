@@ -28,6 +28,8 @@ pipelineJob(project_name) {
                         name(repo_name)
                         url(repo)
                     }
+
+                    //Indica el fichero Jenkinsfile
                     scriptPath("Jenkinsfile")
 
                 }
