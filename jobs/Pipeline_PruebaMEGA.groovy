@@ -18,4 +18,15 @@ freeStyleJob(project_name) {
             }
         }
     }
+
+    steps {
+        python {
+            shell('echo Accede al directorio pruebas.')
+            shell('cd pruebas')
+            shell('echo Lanza ejecutable en segundo plano')
+            command('python generaFichero_ResultadoPruebas.py &')
+            shell('echo Vuelve al directorio original.')
+            shell('cd ..')
+        }
+    }
 }
