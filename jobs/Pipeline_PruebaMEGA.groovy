@@ -20,13 +20,13 @@ freeStyleJob(project_name) {
     }
 
     steps {
+        shell('echo Accede al directorio pruebas.\n
+               cd pruebas\n
+               echo Lanza ejecutable en segundo plano\n')
         python {
-            shell('echo Accede al directorio pruebas.')
-            shell('cd pruebas')
-            shell('echo Lanza ejecutable en segundo plano')
             command('python generaFichero_ResultadoPruebas.py &')
-            shell('echo Vuelve al directorio original.')
-            shell('cd ..')
         }
+        shell('echo Vuelve al directorio original.\n
+              cd ..')
     }
 }
