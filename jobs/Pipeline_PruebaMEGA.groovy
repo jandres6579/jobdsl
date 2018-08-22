@@ -5,7 +5,7 @@ repo_name = "repo1"
 pipelineJob(project_name) {
     definition {
         triggers{
-            scm('H/1 * * * *')
+            scm('H/3 * * * *')
             cron('H/35 * * * *')
         }
 
