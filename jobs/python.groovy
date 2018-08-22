@@ -17,7 +17,7 @@ folder('Proyecto-a') {
 pipelineJob(project_name) {
     definition {
         triggers{
-            scm('H/1 * * * *')
+            scm('H/4 * * * *')
             cron('H/30 * * * *')
         }
 

@@ -6,7 +6,7 @@ freeStyleJob(project_name) {
 
     triggers{
         scm('H/3 * * * *')
-        cron('H/35 * * * *')
+        cron('H/15 * * * *')
     }
 
     scm {
@@ -14,7 +14,7 @@ freeStyleJob(project_name) {
             remote {
                 name(repo_name)
                 url(repo)
-                credentials('Ri73VTzGte2cwnSZbuiZ')
+                credentials('GitLab_user')
             }
         }
     }
