@@ -37,8 +37,8 @@ freeStyleJob(project_name) {
     publishers {
         //Sends email notifications.
         //mailer(String recipients, Boolean dontNotifyEveryUnstableBuild = false, Boolean sendToIndividuals = false)
-        //dontNotifyEveryUnstableBuild --> Send e-mail for every unstable build
+        //dontNotifyEveryUnstableBuild --> Dont send e-mail for every unstable build
         //sendToIndividuals --> Send separate e-mails to individuals who broke the build
-        mailer('jasanchez@odins.es', true, false)
+        mailer('jasanchez@odins.es', false, false)
     }
 }
