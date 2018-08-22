@@ -1,3 +1,5 @@
+//Documentación: https://jenkinsci.github.io/job-dsl-plugin/#
+
 project_name = "dls-seed-MultiBranchPipeline_Scan1mins_BuildIfChanges" 
 repo = "https://github.com/jandres6579/prueba-test-1.git"
 

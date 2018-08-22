@@ -1,3 +1,5 @@
+//Documentación: https://jenkinsci.github.io/job-dsl-plugin/#
+
 project_name = "dls-seed-Pipeline-Scan1mins_Build1Hour" 
 /*
 Si quisiesemos incluir el job en una carpeta. Cambiaríamos la línea anteior por esta...
