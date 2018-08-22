@@ -1,6 +1,4 @@
-echo Accede al directorio pruebas.
+#!/bin/bash
 cd pruebas
-echo Lanza ejecutable en segundo plano
-python generaFichero_ResultadoPruebas.py &
-echo Vuelve al directorio original
+python generaFichero_ResultadoPruebas.py
 cd ..
