@@ -18,13 +18,14 @@ folder('Proyecto-a') {
 
 pipelineJob(project_name) {
     definition {
+/* Lo resolvemos en Jenkinsfile        
         triggers{
             //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
             //Indica la periodicidad para lanzar el build (cron)
             scm('@daily')
             cron('H/30 * * * *')
         }
-
+*/
         cpsScm{
             scm {
                 git {
@@ -41,6 +42,8 @@ pipelineJob(project_name) {
         }
     }
 
+/* No permite pipeline se resuelve en Jenkinsfile
+
     //logRotator(int daysToKeep = -1, int numToKeep = -1, int artifactDaysToKeep = -1, int artifactNumToKeep = -1)
     logRotator {
         //If specified, build records are only kept up to this number of days.
@@ -48,14 +51,18 @@ pipelineJob(project_name) {
         //If specified, only up to this number of build records are kept.
         numToKeep(25)
     }
+*/
 
+/* No permite pipeline preBuildCleanup no lo puede hacer, timestamps se resuelve en Jenkinsfile
     wrappers {
         //Delete workspace before build starts
         preBuildCleanup()
         //Add timestamps to the Console Output
         timestamps()
     }
+*/
 
+/* No permite pipeline  se resuelve en Jenkinsfile
     publishers {
         //Sends email notifications.
         //mailer(String recipients, Boolean dontNotifyEveryUnstableBuild = false, Boolean sendToIndividuals = false)
@@ -63,4 +70,5 @@ pipelineJob(project_name) {
         //sendToIndividuals --> Send separate e-mails to individuals who broke the build
         mailer('jasanchez@odins.es', false, false)
     }
+*/
 }
