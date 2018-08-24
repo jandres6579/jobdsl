@@ -21,7 +21,7 @@ pipelineJob(project_name) {
         triggers{
             //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
             //Indica la periodicidad para lanzar el build (cron)
-            scm('@daily')
+            scm(@daily)
             cron('H/30 * * * *')
         }
 
