@@ -21,7 +21,7 @@ pipelineJob(project_name) {
         triggers{
             //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
             //Indica la periodicidad para lanzar el build (cron)
-//            scm('H/30 * * * *')
+            scm('@daily')
             cron('H/30 * * * *')
         }
 
@@ -40,7 +40,7 @@ pipelineJob(project_name) {
             }
         }
     }
-/*
+
     //logRotator(int daysToKeep = -1, int numToKeep = -1, int artifactDaysToKeep = -1, int artifactNumToKeep = -1)
     logRotator {
         //If specified, build records are only kept up to this number of days.
@@ -63,5 +63,4 @@ pipelineJob(project_name) {
         //sendToIndividuals --> Send separate e-mails to individuals who broke the build
         mailer('jasanchez@odins.es', false, false)
     }
-*/
 }
