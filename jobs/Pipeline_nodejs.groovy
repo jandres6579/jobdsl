@@ -53,7 +53,7 @@ pipelineJob(project_name) {
     }
 */
 
-/* No permite pipeline preBuildCleanup no lo puede hacer, timestamps se resuelve en Jenkinsfile
+/* No permite pipeline preBuildCleanup se resuelve con deletedir, timestamps se resuelve en Jenkinsfile
     wrappers {
         //Delete workspace before build starts
         preBuildCleanup()
