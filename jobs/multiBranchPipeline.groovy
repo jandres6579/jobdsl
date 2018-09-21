@@ -22,7 +22,7 @@ multibranchPipelineJob(project_name) {
             //Days to keep old items. if not empty, old items are only kept up to this number of days
             //daysToKeep(10)
             //Max # of old items to keep. if not empty, only up to this number of old items are kept
-            numToKeep(20) //¿es posible que se pierda por lo que pueda haber en el jenkinsfile.
+            numToKeep(5) //¿es posible que se pierda por lo que pueda haber en el jenkinsfile.
         }
     }
 }
