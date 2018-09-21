@@ -1,7 +1,7 @@
 //Documentación: https://jenkinsci.github.io/job-dsl-plugin/#
 
-project_name = "dls-seed-MultiBranchPipeline_GitHub_Scan1mins_BuildJenkinsfile" 
-repo = "https://github.com/jandres6579/prueba-test-1.git"
+project_name = "dls-seed-MultiBranchPipeline_" 
+repo = "https://github.com/jandres6579/jenkinsNode.git"
 
 multibranchPipelineJob(project_name) {
     //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
@@ -22,7 +22,7 @@ multibranchPipelineJob(project_name) {
             //Days to keep old items. if not empty, old items are only kept up to this number of days
             //daysToKeep(10)
             //Max # of old items to keep. if not empty, only up to this number of old items are kept
-            numToKeep(20)
+            numToKeep(20) //¿es posible que se pierda por lo que pueda haber en el jenkinsfile.
         }
     }
 }
