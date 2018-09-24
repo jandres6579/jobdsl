@@ -5,8 +5,9 @@ repo = "https://github.com/jandres6579/jenkinsNode.git"
 
 multibranchPipelineJob(project_name) {
     //Indica la periodicidad para ver si ha cambiado algo en los fuentes del repositorio al que está asociado (scm)
+    //Expresado en minutos
     triggers {
-        periodic(1)
+        periodic(1440)
     }
 
     //Vincula con el repositorio de GitHub
